@@ -15,7 +15,7 @@
     "dock": "left"
   },
   "elixir": {
-    "preferred_line_length": 64,
+    "preferred_line_length": 80,
     "tab_size": 2,
     "soft_wrap": "preferred_line_length",
     "format_on_save": "on",
