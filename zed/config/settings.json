@@ -7,33 +7,40 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "languages": {
+    "Elixir": {
+      "show_inline_completions": true,
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      },
+      "preferred_line_length": 160,
+      "tab_size": 2,
+      "soft_wrap": "preferred_line_length",
+      "language_servers": ["lexical"]
+    }
+  },
+  "lsp": {
+    "lexical": {
+      "binary": {
+        "path": "/Users/velez/Projects/lexical/_build/dev/package/lexical/bin/start_lexical.sh",
+        "arguments": [""]
+      }
+    }
+  },
   "theme": "Gruvbox Dark Hard",
-  "ui_font_size": 14,
+  "ui_font_size": 16,
   "buffer_font_size": 14,
   "buffer_font_family": "JetBrains Mono",
   "project_panel": {
-    "dock": "left"
+    "dock": "right"
   },
-  "elixir": {
-    "preferred_line_length": 80,
-    "tab_size": 2,
-    "soft_wrap": "preferred_line_length",
-    "format_on_save": "on",
-    "formatter": {
-      "external": {
-        "command": "mix format",
-        "arguments": [
-          "--stdin",
-          "--stdin-filename",
-          "{buffer_path}"
-        ]
-      }
+  "terminal": {
+    "shell": {
+      "program": "zsh"
     },
-    "lsp": {
-      "local": {
-        "path": "/Projects/lexical/_build/dev/package/lexical/bin/start_lexical.sh",
-        "arguments": []
-      }
-    }
+    "font_size": 16
   }
 }
